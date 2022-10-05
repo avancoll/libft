@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:50:08 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 13:32:39 by avancoll         ###   ########.fr       */
+/*   Created: 2022/10/05 15:54:40 by avancoll          #+#    #+#             */
+/*   Updated: 2022/10/05 16:24:29 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t			i;
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (ptr[i] == (unsigned char)c)
-			return (ptr + i);
-		i++;
-	}
-	return (0);
+	oioioi;
 }

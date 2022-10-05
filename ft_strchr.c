@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:39:35 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/04 14:47:25 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/05 13:33:22 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 		return (0);
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *)s + i);
 	return (0);
 }

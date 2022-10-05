@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:18:38 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/04 16:09:48 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/04 18:33:01 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
 
-	if (n == 0 || !s1 || !s2)
+	if (n == 0)
 		return (0);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;

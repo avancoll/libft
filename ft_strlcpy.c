@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:27:46 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/04 14:47:31 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:38:01 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	size_t	i;
 
-}
-
-#include <string.h>
-#include <stdio.h>
-
-int	main(void)
-{
-
-
-	printf("%s\n", strlcpy(dst1, src, 3))
+	i = 0;
+	while (i < dstsize && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (dstsize != 0)
+		dst[i] = '\0';
+	while (src[i])
+	{
+		i++;
+	}
+	return (i);
 }

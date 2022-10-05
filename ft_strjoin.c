@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:12:09 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 16:26:35 by avancoll         ###   ########.fr       */
+/*   Created: 2022/10/05 15:46:45 by avancoll          #+#    #+#             */
+/*   Updated: 2022/10/05 15:52:18 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
-	unsigned int	tot;
+	char	*res;
+	size_t	i;
+	size_t	j;
 
+	res = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!res)
+		return (0);
 	i = 0;
-	j = 0;
-	k = 0;
-	while (dst[i])
-		i++;
-	while (src[k])
-		k++;
-	tot = i + k;
-	if (i > dstsize)
-		tot = i + dstsize;
-	if (i < dstsize)
+	while (s1[i])
 	{
-		while (src[j] && (dstsize - tot + i - 1) > j)
-		{
-			dst[i + j] = src[j];
-			j++;
-		}
+		res[i] = s1[i];
+		i++;
 	}
-	if (dstsize != 0 && dstsize > ft_strlen(dst))
-		dst[i + j] = '\0';
-	return (tot);
+	j = 0;
+	while (s2[j])
+	{
+		res[i + j] = s2[j];
+		j++;
+	}
+	res[i + j] = '\0';
+	return (res);
 }

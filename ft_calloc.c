@@ -20,3 +20,13 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
+
+void    *calloc(size_t n_elm, size_t size)
+{    
+    void    *ptr;
+
+    if (n_elm == 0 || size == 0)
+        return (NULL);
+    ptr = malloc(n_elm * size);
+    return (ptr);
+}

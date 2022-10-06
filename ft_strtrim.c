@@ -6,11 +6,13 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:54:40 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 16:24:29 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:52:07 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	oioioi;
+	(void)s1;
+	(void)set;
+	return (0);
 }

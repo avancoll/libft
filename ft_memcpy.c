@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:03:31 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 12:56:58 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:38:16 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*ptr2;
 
 	i = 0;
+	if (!dst && !src && n)
+		return (0);
 	ptr1 = (unsigned char *)dst;
 	ptr2 = (unsigned char *)src;
 	while (i < n)

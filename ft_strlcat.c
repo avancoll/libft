@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:12:09 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/06 11:44:41 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:43:27 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 
 	if ((!dst || !src) && dstsize == 0)
-		return (0);
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (dst[i] && i < dstsize)

@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:54:40 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/06 17:27:14 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:44:47 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	size;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	if (!s1[0] || !set[0])
 		return (ft_strdup(s1));
 	size = ft_malloc_size(s1, set);

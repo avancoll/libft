@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:32:02 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 13:35:14 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:44:31 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
-	while (i != 0)
+	while (i)
 	{
 		if (s[i] == (char)c)
 			return ((char *)s + i);
@@ -25,5 +25,5 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (s[i] == (char)c)
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }

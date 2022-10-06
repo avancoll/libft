@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:07:31 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/05 13:17:10 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:42:49 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s1)
 		i++;
 	dst = malloc(sizeof(char) * (i + 1));
 	if (!dst)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{

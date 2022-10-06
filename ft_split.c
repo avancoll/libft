@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:36 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/06 17:45:11 by avancoll         ###   ########.fr       */
+/*   Created: 2022/10/06 17:45:38 by avancoll          #+#    #+#             */
+/*   Updated: 2022/10/06 17:45:52 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	**ft_split(char const *s, char c)
 {
-	char	*subs;
-	size_t	i;
 
-	if (!s || !len)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	subs = malloc(sizeof(*subs) * (len + 1));
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		subs[i] = s[start + i];
-		i++;
-	}
-	subs[i] = '\0';
-	return (subs);
 }

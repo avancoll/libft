@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:42:18 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/06 11:53:41 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:43:57 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	if ((!haystack || !needle) && len == 0)
-		return (0);
+		return (NULL);
 	i = 0;
 	if (!*needle)
 		return ((char *)haystack);

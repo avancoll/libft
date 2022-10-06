@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:57:59 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/06 11:43:13 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:41:28 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }

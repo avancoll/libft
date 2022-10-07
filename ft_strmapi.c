@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:36 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/07 13:45:43 by avancoll         ###   ########.fr       */
+/*   Created: 2022/10/07 15:34:45 by avancoll          #+#    #+#             */
+/*   Updated: 2022/10/07 15:52:00 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	check_len(char const *s, unsigned int start, size_t len)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (len >= ft_strlen(s) - start)
-		return (ft_strlen(s) - start);
-	else
-		return (len);
-}
+	char			*res;
+	unsigned int	i;
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*subs;
-	size_t	i;
-
-	if (!s)
+	if (!s || !*f)
 		return (NULL);
-	if (start >= ft_strlen(s) || !len)
-		return (ft_strdup(""));
-	subs = malloc(sizeof(*subs) * (check_len(s, start, len) + 1));
-	if (!subs)
+	res = malloc(sizeof(*res) * (ft_strlen(s) + 1));
+	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (i < ft_strlen(s))
 	{
-		subs[i] = s[start + i];
+		res[i] = (*f)(i, s[i]);
 		i++;
 	}
-	subs[i] = '\0';
-	return (subs);
+	res[i] = '\0';
+	return (res);
 }

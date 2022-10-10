@@ -6,7 +6,7 @@
 #    By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 18:22:00 by avancoll          #+#    #+#              #
-#    Updated: 2022/10/10 15:20:11 by avancoll         ###   ########.fr        #
+#    Updated: 2022/10/10 17:19:15 by avancoll         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,10 @@ BONUS_SRCS	=	ft_lstnew.c\
 				ft_lstsize.c\
 				ft_lstlast.c\
 				ft_lstadd_back.c\
-
+				ft_lstdelone.c\
+				ft_lstclear.c\
+				ft_lstiter.c\
+				ft_lstmap.c
 
 OBJS		= $(SRCS:.c=.o)
 

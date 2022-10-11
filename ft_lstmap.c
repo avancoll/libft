@@ -6,12 +6,11 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:10:56 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/10 18:51:39 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:06:10 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	free_all(t_list *new_lst)
 {
@@ -32,22 +31,21 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*temp;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
 		temp = ft_lstnew(f(lst->content));
-		temp = temp->next;
 		if (!temp)
 		{
 			if (del)
-				ft_lstclear(new_lst, del);
+				ft_lstclear(&new_lst, del);
 			else
 				free_all(new_lst);
 			return (NULL);
 		}
-		ft_lstadd_back(new_lst, temp);
+		ft_lstadd_back(&new_lst, temp);
 		lst = lst->next;
 	}
 	return (new_lst);

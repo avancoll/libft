@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 14:55:33 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/10 18:47:41 by avancoll         ###   ########.fr       */
+/*   Created: 2022/10/10 14:49:29 by avancoll          #+#    #+#             */
+/*   Updated: 2022/10/11 13:53:40 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	int		res;
+	t_list	*temp;
+
+	res = 0;
+	temp = lst;
+	while (temp)
+	{
+		temp = temp->next;
+		res++;
+	}
+	return (res);
 }

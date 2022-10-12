@@ -6,7 +6,7 @@
 /*   By: avancoll <avancoll@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:00:57 by avancoll          #+#    #+#             */
-/*   Updated: 2022/10/11 12:59:41 by avancoll         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:51:04 by avancoll         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_atoi(const char *str)
 		if (str[i++] == '-')
 			sign = -sign;
 	}
+	while (str[i] == '0')
+		i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9' && ++temp)
 		res = res * 10 + str[i++] - 48;
 	if ((res >= 9223372036854775807 || temp >= 20) && sign == 1)
